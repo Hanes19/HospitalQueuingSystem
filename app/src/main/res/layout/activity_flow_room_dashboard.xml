@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#EAEFF1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:padding="16dp"
+        android:elevation="4dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="NexusCare: Floor 3 Dashboard"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#263238"/>
+
+        <TextView
+            android:id="@+id/heatMapAlert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⚠️ Diagnostics Queue Critical"
+            android:textColor="#D32F2F"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:background="#FFCDD2"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_margin="8dp"
+            android:background="#F5F7FA">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Triage Hub"
+                android:textAlignment="center"
+                android:padding="12dp"
+                android:textStyle="bold"
+                android:background="#CFD8DC"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerTriage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_margin="8dp"
+            android:background="#F5F7FA">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Diagnostic Node"
+                android:textAlignment="center"
+                android:padding="12dp"
+                android:textStyle="bold"
+                android:background="#CFD8DC"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerDiagnostic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_margin="8dp"
+            android:background="#F5F7FA">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Treatment Zone"
+                android:textAlignment="center"
+                android:padding="12dp"
+                android:textStyle="bold"
+                android:background="#CFD8DC"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerTreatment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_margin="8dp"
+            android:background="#F5F7FA">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Discharge Lounge"
+                android:textAlignment="center"
+                android:padding="12dp"
+                android:textStyle="bold"
+                android:background="#CFD8DC"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerDischarge"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

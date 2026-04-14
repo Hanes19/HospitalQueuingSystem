@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#F5F7FA"> <LinearLayout
+    android:id="@+id/alertBanner"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFCDD2"
+    android:padding="16dp"
+    android:layout_marginBottom="16dp"
+    android:visibility="gone"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Queue Update"
+        android:textStyle="bold"
+        android:textColor="#C62828"/>
+
+    <TextView
+        android:id="@+id/alertMessageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="An emergency case has arrived. Your time has been updated."
+        android:textColor="#C62828"/>
+</LinearLayout>
+
+    <TextView
+        android:id="@+id/greetingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello, Patient"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/queueIdText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Queue # --"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"/>
+
+    <View
+        android:id="@+id/priorityColorBadge"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="#9E9E9E"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Status:"
+        android:textSize="14sp"
+        android:textColor="#757575"/>
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Awaiting Triage"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estimated Wait:"
+        android:textSize="14sp"
+        android:textColor="#757575"/>
+
+    <TextView
+        android:id="@+id/waitTimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-- Minutes"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:textColor="#1565C0"/>
+
+</LinearLayout>
