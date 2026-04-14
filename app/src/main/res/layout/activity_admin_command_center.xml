@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ECEFF1"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NexusCare Command Center"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#263238"
+        android:layout_marginBottom="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="2dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Throughput (L)" android:textSize="14sp" android:textColor="#546E7A"/>
+            <TextView android:id="@+id/metricThroughput" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-- Patients/Hr" android:textSize="22sp" android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="2dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Arrival Rate (λ)" android:textSize="14sp" android:textColor="#546E7A"/>
+            <TextView android:id="@+id/metricArrival" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-- /Hr" android:textSize="22sp" android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:elevation="2dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Avg Wait Time (W)" android:textSize="14sp" android:textColor="#546E7A"/>
+            <TextView android:id="@+id/metricWaitTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-- Mins" android:textSize="22sp" android:textStyle="bold" android:textColor="#1565C0"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hospital Heat Map"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="2">
+
+        <LinearLayout
+            android:id="@+id/heatMapTriage"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#C8E6C9"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ER / Triage" android:textStyle="bold"/>
+            <TextView android:id="@+id/triageQueueCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Queue: 4"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/heatMapDiagnostics"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#FFCC80"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Diagnostics" android:textStyle="bold"/>
+            <TextView android:id="@+id/diagQueueCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Queue: 12"/>
+        </LinearLayout>
+
+    </GridLayout>
+</LinearLayout>
