@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class VirtualWaitingRoomActivity extends AppCompatActivity {
 
@@ -32,10 +33,24 @@ public class VirtualWaitingRoomActivity extends AppCompatActivity {
         alertMessageText = findViewById(R.id.alertMessageText);
 
         // 2. Load Initial Patient Data (This would eventually come from an Intent or Database)
-        initializePatientData("Jane Doe", "A-104", "STANDARD", "Awaiting Triage", 45);
+        // 1. Find the RecyclerView in your XML layout
+        RecyclerView recyclerView = findViewById(R.id.recyclerWaitingList);
 
-        // Example: Simulating an emergency after a delay could be done here
-        // triggerEmergencyOverride(15);
+// 2. Tell the RecyclerView how to arrange the items (in a vertical list)
+        recyclerView.setLayoutManager(new androidx.recyclerview.widget.LinearLayoutManager(this));
+
+// 3. Create some dummy patient data to test our design
+        java.util.List<Patient> dummyPatients = new java.util.ArrayList<>();
+        dummyPatients.add(new Patient("Jane Doe", "A-104", "Awaiting Triage", 45));
+        dummyPatients.add(new Patient("John Smith", "B-201", "In Progress", 15));
+        dummyPatients.add(new Patient("Alice Johnson", "Wait Area", "Pending Lab", 60));
+        dummyPatients.add(new Patient("Mark Evans", "C-305", "Ready for Discharge", 5));
+
+// 4. Create the adapter and give it our dummy data
+        PatientAdapter adapter = new PatientAdapter(dummyPatients);
+
+// 5. Attach the adapter to the RecyclerView
+        recyclerView.setAdapter(adapter);
     }
 
     /**

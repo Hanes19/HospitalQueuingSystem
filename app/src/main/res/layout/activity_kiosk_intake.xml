@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="32dp"
+    android:background="#F5F7FA"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to NexusCare"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please select your primary reason for visiting today:"
+        android:textSize="20sp"
+        android:textColor="#757575"
+        android:layout_marginBottom="48dp"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/btnSymptomIllness"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="Fever / General Illness"
+        android:textSize="20sp"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnSymptomInjury"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="Physical Injury / Pain"
+        android:textSize="20sp"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnSymptomCheckup"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="Routine Checkup / Lab Work"
+        android:textSize="20sp"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnSymptomOther"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="Other"
+        android:textSize="20sp"
+        android:layout_marginBottom="16dp"/>
+
+</LinearLayout>
